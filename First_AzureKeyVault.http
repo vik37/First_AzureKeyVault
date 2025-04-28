@@ -1,0 +1,28 @@
+@First_AzureKeyVault_HostAddress = http://localhost:5101
+
+GET {{First_AzureKeyVault_HostAddress}}/api/configuration
+Accept: application/json
+
+###
+
+GET {{First_AzureKeyVault_HostAddress}}/api/configuration/all
+Accept: application/json
+
+###
+
+POST {{First_AzureKeyVault_HostAddress}}/api/configuration/all 
+Content-Type: application/json
+Accept: application/json
+{
+  "Name": "KEYVAULT_KEY",
+  "Value": "KEYVAULT_VALUE"
+}
+
+###
+PUT {{First_AzureKeyVault_HostAddress}}/api/configuration/all 
+Content-Type: application/json
+Accept: application/json
+{
+  "Name": "KEYVAULT_KEY",
+  "Value": "KEYVAULT_VALUE"
+}
